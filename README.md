@@ -28,7 +28,7 @@ A web-based application designed to help users detect and understand their stres
 ### Cloning the Repository
 1.  Open your terminal or command prompt
 2.  Navigate to the directory where you want to clone the project
-3.  bashCopygit clone https://github.com/Prajwal246800/Stress\_Level\_Detecter.git
+3.  ```git clone https://github.com/Prajwal246800/Stress\_Level\_Detecter.git```
     
 ### Running the Project
 There are two primary methods to run the project:
