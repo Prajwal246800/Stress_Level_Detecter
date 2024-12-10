@@ -24,6 +24,9 @@ document.getElementById("stress-form").addEventListener("submit", function (e) {
             </ul>
             <p>For general relaxation, check out this video:</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8R2FfRl6V8U?si=qJZXL-7XZZgS1rSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lHVYgnlukTw?si=js6Fg4dTUZcW1Mo-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nusf3ISodRE?si=URg_zr9c3asxV5EZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iqcAWup2aCE?si=LhkJefWUCoF2JJ-P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
     } else if (totalScore <= 40) {
         stressLevel.textContent = "Medium";
@@ -38,6 +41,9 @@ document.getElementById("stress-form").addEventListener("submit", function (e) {
             </ul>
             <p>Watch this video for relaxation techniques:</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8R2FfRl6V8U?si=qJZXL-7XZZgS1rSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lHVYgnlukTw?si=js6Fg4dTUZcW1Mo-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nusf3ISodRE?si=URg_zr9c3asxV5EZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iqcAWup2aCE?si=LhkJefWUCoF2JJ-P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
     } else {
         stressLevel.textContent = "High";
@@ -52,6 +58,9 @@ document.getElementById("stress-form").addEventListener("submit", function (e) {
             </ul>
             <p>Here's a helpful video to get started with stress management:</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8R2FfRl6V8U?si=qJZXL-7XZZgS1rSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lHVYgnlukTw?si=js6Fg4dTUZcW1Mo-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nusf3ISodRE?si=URg_zr9c3asxV5EZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iqcAWup2aCE?si=LhkJefWUCoF2JJ-P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
     }
 
