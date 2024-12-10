@@ -1,5 +1,5 @@
 # Stress Level Detector
-=====================
+-------------------
 
 ## Project Description
 -------------------
