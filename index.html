@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Level Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Stress Level Detector</h1>
+        <p>Answer the following questions to understand your stress level and get recommendations.</p>
+    </header>
+
+    <main>
+        <section class="quiz-container">
+            <form id="stress-form">
+                <div class="question">
+                    <label>1. Unsure of co-workers’ expectations</label>
+                    <select name="q1" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>2. Overloaded at work, unable to complete tasks during an average day</label>
+                    <select name="q2" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>3. Job requirements are taking their toll on your private life</label>
+                    <select name="q3" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>4. Uncertainty about your exact job responsibilities</label>
+                    <select name="q4" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>5. Trouble talking to your boss</label>
+                    <select name="q5" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>6. Work conditions are unhealthy</label>
+                    <select name="q6" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>7. Often take work home to complete</label>
+                    <select name="q7" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>8. Little chance for growth exists</label>
+                    <select name="q8" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>9. Fear of being laid off or fired</label>
+                    <select name="q9" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label>10. Not enough break or meal time</label>
+                    <select name="q10" required>
+                        <option value="1">Never</option>
+                        <option value="2">Rarely</option>
+                        <option value="3">Occasionally</option>
+                        <option value="4">Usually</option>
+                        <option value="5">Constantly</option>
+                    </select>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="result-container" id="result-container">
+            <h2>Your Stress Level: <span id="stress-level"></span></h2>
+            <div id="recommendations"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Stress Level Detector | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
