@@ -5,246 +5,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stress Level Detector</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+        }
+
+        /* Form Styles */
+        .form-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>Stress Level Detector</h1>
-        <p>Answer the following questions to understand your stress level and get recommendations.</p>
+        <p>Start by entering your details and proceed to the questionnaire to assess your stress levels.</p>
     </header>
 
     <main>
-        <section class="quiz-container">
-            <form id="stress-form">
-                <div class="question">
-                    <label>1. Unsure of co-workers’ expectations</label>
-                    <select name="q1" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
+        <!-- Login Page -->
+        <section class="form-container">
+            <form id="user-details-form" onsubmit="navigateToIndex(event)">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
                     </select>
                 </div>
 
-                <div class="question">
-                    <label>2. Overloaded at work, unable to complete tasks during an average day</label>
-                    <select name="q2" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
+                <div class="input-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required min="1" max="120">
                 </div>
 
-                <div class="question">
-                    <label>3. Job requirements are taking their toll on your private life</label>
-                    <select name="q3" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>4. Uncertainty about your exact job responsibilities</label>
-                    <select name="q4" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>5. Trouble talking to your boss</label>
-                    <select name="q5" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>6. Work conditions are unhealthy</label>
-                    <select name="q6" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>7. Often take work home to complete</label>
-                    <select name="q7" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>8. Little chance for growth exists</label>
-                    <select name="q8" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>9. Fear of being laid off or fired</label>
-                    <select name="q9" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>10. Not enough break or meal time</label>
-                    <select name="q10" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>11. Can’t satisfy conflicting demands from superiors</label>
-                    <select name="q11" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>12. Job responsibilities go against your better judgment</label>
-                    <select name="q12" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>13. Ideas differ from those of your supervisor</label>
-                    <select name="q13" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>14. Discomfort in handling unethical assignments</label>
-                    <select name="q14" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>15. Rushed to complete work or short on time</label>
-                    <select name="q15" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>16. Heavy physical tasks to complete</label>
-                    <select name="q16" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>17. Struggling to balance teaching, research, and administrative responsibilities</label>
-                    <select name="q17" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>18. Struggling to manage diverse student needs and expectations</label>
-                    <select name="q18" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>19. Stress from excessive administrative responsibilities or committee work</label>
-                    <select name="q19" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-                <div class="question">
-                    <label>20. Concerns about professional growth, promotion, or tenure</label>
-                    <select name="q20" required>
-                        <option value="1">Never</option>
-                        <option value="2">Rarely</option>
-                        <option value="3">Occasionally</option>
-                        <option value="4">Usually</option>
-                        <option value="5">Constantly</option>
-                    </select>
-                </div>
-
-
-                <button type="submit">Submit</button>
+                <button type="submit">Start Questionnaire</button>
             </form>
-        </section>
-
-        <section class="result-container" id="result-container">
-            <h2>Your Stress Level: <span id="stress-level"></span></h2>
-            <div id="recommendations"></div>
         </section>
     </main>
 
@@ -252,7 +129,13 @@
         <p>© 2024 Stress Level Detector | All Rights Reserved</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Function to navigate to the index.html page
+        function navigateToIndex(event) {
+            event.preventDefault(); // Prevent the default form submission
+            window.location.href = "questions.html"; // Redirect to the questionnaire page
+        }
+    </script>
 </body>
 
 </html>
